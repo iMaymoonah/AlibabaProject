@@ -34,25 +34,39 @@
 
 			<div class="wsize1 m-lr-auto">
 				<p class="txt-center l1-txt1 p-b-60">
-					Welcome To  <span class="l1-txt2">eBook Library!</span><br><br>
+					Welcome  eBook Library <span class="l1-txt2">Admin !</span><br><br>
 				
 				
-					<span style="font-size: medium;">Enjoy reading digital books, all for free and available anytime and anywhere..</span>
+					
 				</p>
-				<form class="w-full flex-w flex-c-m validate-form" action="search.html">
+				<form class="w-full flex-w flex-c-m validate-form" action="admin.html">
 					<p class="txt-center s1-txt1 p-t-5">
-						Enter the title and File of the Book
+						Enter the <strong>Title</strong> of the Book
 					</p>
-					<input class="input100 placeholder0 m1-txt1" type="text" name="title" placeholder="Book Title">
+					<input class="input100 placeholder0 m1-txt1" type="text" name="title" placeholder="Book Title" required pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Please enter on alphabets only.')">
 					<span class="focus-input100"></span>
+
+
 					<p class="txt-center s1-txt1 p-t-5">
-						-
+						Enter the <strong>Auther</strong> of the Book
+					</p>
+					<input class="input100 placeholder0 m1-txt1" type="text" name="auther" placeholder="Book Auther" required pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Please enter on alphabets only.')">
+					<span class="focus-input100"></span>
+
+
+					<p class="txt-center s1-txt1 p-t-5">
+						Select the <strong>PDF File</strong> of the Book
 					</p>
 				
-						<input class="input100 placeholder0 m1-txt1" type="file" name="title" placeholder="Book File">
+						<input class="input100 placeholder0 m1-txt1" type="file" name="file" placeholder="Book File" required accept="application/pdf">
 						<span class="focus-input100"></span>
 					
-					
+
+
+						
+						<p class="txt-center s1-txt1 p-t-5">
+						</br>
+						</p>
 						
 				<button class="flex-c-m size3 m1-txt2 how-btn1 trans-04 m-b-20">
 						upload
