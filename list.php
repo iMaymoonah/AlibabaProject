@@ -61,7 +61,7 @@ include 'con.php';
 $sql="SELECT * FROM book";
 $result=mysqli_query($sql);
 mysqli_query('SET CHARACTER SET utf8');
-
+echo $row = mysqli_fetch_array($result);
 while($row = mysqli_fetch_array($result)) {
 	echo "
 	<div class='flex-w flex-c-m cd100 wsize1 m-lr-auto p-t-116'>
