@@ -51,7 +51,7 @@ include 'con.php';
 				
 					
 				</p>
-				<form class="w-full flex-w flex-c-m validate-form" action="">
+				<form class="w-full flex-w flex-c-m validate-form" action="admin.php">
 					<p class="txt-center s1-txt1 p-t-5">
 						Enter the <strong>Title</strong> of the Book
 					</p>
