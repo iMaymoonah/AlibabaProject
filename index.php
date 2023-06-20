@@ -57,7 +57,7 @@ include 'con.php';
 				
 					<span style="font-size: medium;">Enjoy reading digital books, all for free and available anytime and anywhere..</span>
 				</p>
-				<form class="w-full flex-w flex-c-m validate-form" >
+				<form class="w-full flex-w flex-c-m validate-form"  action="index.php">
 
 					<p class="txt-center s1-txt1 p-t-5">
 						Enter the title of book you wish to read
