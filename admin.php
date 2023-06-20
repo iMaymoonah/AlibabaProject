@@ -101,7 +101,7 @@ $title = $_POST['title'];
 $auther = $_POST['auther'];
 $file = $_POST['file'];
 
-
+$sql ="INSERT INTO book (title,author,file) VALUES ($title, $author,$file)";
 
 
 
