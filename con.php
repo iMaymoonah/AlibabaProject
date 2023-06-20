@@ -1,7 +1,7 @@
 <?php 
 // connection to db 
 
-	$DB_HOST = "rm-l4vfr6frdw2sgh7flco.mysql.me-central-1.rds.aliyuncs.com";
+	$DB_HOST = "rrm-l4v09mz21q0tr948qeo.mysql.me-central-1.rds.aliyuncs.com";
 	$DB_PORT = "3306";
     $DB_USER = "db_protestacc";
     $DB_PASSWORD = "Amalshamrani1010$$";
