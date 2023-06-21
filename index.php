@@ -1,6 +1,8 @@
 <?php 
 // connection to db 
-include 'con.php'; 
+// connection to db 
+
+
 
 ?>
 
@@ -57,7 +59,7 @@ include 'con.php';
 				
 					<span style="font-size: medium;">Enjoy reading digital books, all for free and available anytime and anywhere..</span>
 				</p>
-				<form class="w-full flex-w flex-c-m validate-form"  action="index.php">
+				<form class="w-full flex-w flex-c-m validate-form" >
 
 					<p class="txt-center s1-txt1 p-t-5">
 						Enter the title of book you wish to read
@@ -70,7 +72,7 @@ include 'con.php';
 				</br>
 				</form>
 				
-				
+				<p class="txt-center s1-txt1 p-t-5"><a href="list.php">See All </a> </p>
 			</div>
 				
 
@@ -79,17 +81,20 @@ include 'con.php';
 // to get search result after click search
 if(isset($_POST['submit'])  )
  {
-$title= $_POST['title'];
+	$title= $_POST['title'];
 
-$sql="SELECT *
-FROM book
-WHERE title LIKE %$title%";
-
-$result=mysqli_query($sql);
-mysqli_query('SET CHARACTER SET utf8');
-
-while($row = mysqli_fetch_array($result)) {
-	echo "
+	$DB_HOST = "rm-l4v9j450xpi4rwhdv7o.mysql.me-central-1.rds.aliyuncs.com";
+    $DB_PORT = "3306";
+    $DB_USER = "db_protestacc";
+    $DB_PASSWORD = "Amalshamrani1010$$";
+    $DB_DATABASE = "db_protest";
+    $table = "book";
+	
+try {
+  $db = new PDO("mysql:host=$DB_HOST;dbname=$DB_DATABASE", $DB_USER, $DB_PASSWORD);
+ 
+  foreach($db->query("SELECT * FROM $table WHERE title LIKE %$title%") as $row) {
+    echo "
 	<div class='flex-w flex-c-m cd100 wsize1 m-lr-auto p-t-116'>
 	<div class='flex-col-c-m size2 bor1 m-l-10 m-r-10 m-b-15'>
 					<a href='".$row['file'];."'> <span class='l1-txt3 p-b-9 days'>".$row['title'];."</span></a>
@@ -99,7 +104,19 @@ while($row = mysqli_fetch_array($result)) {
 
 
 
-}//while
+
+  }
+
+
+
+} catch (PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
+
+
+
+
 
 
  }//if
